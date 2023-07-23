@@ -9,6 +9,8 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask mask;
     private PlayerUI playerUI;
     private InputManager inputManager;
+
+    private GameObject heldItem = null;
     void Start()
     {
         cam = GetComponent<PlayerLook>().cam;
@@ -24,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
         Debug.DrawRay(ray.origin,ray.direction * distance);
         RaycastHit hitInfo; //Store collision info
-        if(Physics.Raycast(ray, out hitInfo, distance, mask)) {
+        if(heldItem == null && Physics.Raycast(ray, out hitInfo, distance, mask)) {
             if(hitInfo.collider.GetComponent<Interactable>() != null) {
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
                 playerUI.UpdateText(interactable.promptMessage);
