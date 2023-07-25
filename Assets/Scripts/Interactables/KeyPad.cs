@@ -5,9 +5,9 @@ using UnityEngine;
 public class KeyPad : Interactable
 {
     [SerializeField] private Triggerable triggerable;
-    protected override void Interact()
+    protected override void Interact(GameObject player)
     {
         triggerable.BaseTrigger();
-        base.Interact();
+        base.Interact(player);
     }
 }

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 169792552}
   - component: {fileID: 169792553}
   - component: {fileID: 5368680234133379784}
+  - component: {fileID: 169792555}
+  - component: {fileID: 169792556}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -166,6 +168,39 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
+  attatchPoint: {fileID: 3967767139047220085}
+--- !u!114 &169792555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284137046587237867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b4066e1d1f7ce44b0d0b87f3016f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: {fileID: 0}
+--- !u!114 &169792556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284137046587237867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06488029325d8d3449e83570ae8a79d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  chipSpeed: 2
+  frontHealthBar: {fileID: 0}
+  backHealthBar: {fileID: 0}
+  overlay: {fileID: 0}
+  overlayDuration: 0.75
+  overlayFadeSpeed: 1.5
 --- !u!1 &3967767139047220085
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228429768695319776}
   m_Layer: 0
-  m_Name: GrabbablePos
+  m_Name: AttatchPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
